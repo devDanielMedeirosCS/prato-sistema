@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insumo Cadastrado - PRATO</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+
+<div class="sistema">
+
+    <!-- Menu lateral de navegação -->
+    <aside class="menu-lateral">
+
+        <div class="logo">
+            <h1>PRATO</h1>
+            <span class="barra-logo"></span>
+            <p>Painel de Rentabilidade e Análise Técnica Operacional</p>
+        </div>
+
+        <nav>
+                <p class="titulo-grupo">Análise</p>
+                <a href="index.html">Painel</a>
+                <a href="cardapio.html">Cardápio</a>
+                <a href="precificacao.html">Precificação</a>
+                <p class="titulo-grupo">Cadastro</p>
+                <a href="insumos.html">Insumos</a>
+                <a href="cadastrar-prato.html">Novo<span class="so-desktop"> prato</span></a>
+                <a href="cadastrar-insumo.html" class="ativo">Novo<span class="so-desktop"> insumo</span></a>
+        </nav>
+
+    </aside>
+
+    <!-- Área de conteúdo -->
+    <div class="area-conteudo">
+
+        <header class="topo">
+            <div>
+                <h2>Insumo Cadastrado</h2>
+                <p class="subtitulo">Confirmação da operação</p>
+            </div>
+            <div class="usuario">
+                <span class="nome">Carlos Daniel</span>
+                <span class="cargo">Gerente</span>
+            </div>
+        </header>
+
+        <main>
+            <div class="sucesso">
+                <span class="selo">&#10003;</span>
+                <h3>Insumo cadastrado com sucesso</h3>
+                <p>
+                    O insumo entrou na base de custos e já pode ser usado nas fichas técnicas.
+                    Pratos que utilizarem este item terão o custo calculado com o preço informado.
+                </p>
+
+                <div class="botoes">
+                    <a href="cadastrar-insumo.html" class="botao-link">Cadastrar outro insumo</a>
+                    <a href="insumos.html" class="botao-link botao-secundario">Ver os insumos</a>
+                    <a href="index.html" class="botao-link botao-secundario">Voltar ao painel</a>
+                </div>
+
+                <ul class="passos">
+                    <li>Vincule o insumo às fichas técnicas dos pratos que o utilizam.</li>
+                    <li>Guarde a nota da cotação para conferência futura.</li>
+                    <li>Reveja a cotação periodicamente: preço desatualizado distorce o CMV.</li>
+                </ul>
+            </div>
+        </main>
+
+    </div>
+
+</div>
+
+</body>
+</html>

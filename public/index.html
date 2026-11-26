@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel de Rentabilidade - PRATO</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+
+<div class="sistema">
+
+    <!-- Menu lateral de navegação -->
+    <aside class="menu-lateral">
+
+        <div class="logo">
+            <h1>PRATO</h1>
+            <span class="barra-logo"></span>
+            <p>Painel de Rentabilidade e Análise Técnica Operacional</p>
+        </div>
+
+        <nav>
+                <p class="titulo-grupo">Análise</p>
+                <a href="index.html" class="ativo">Painel</a>
+                <a href="cardapio.html">Cardápio</a>
+                <a href="precificacao.html">Precificação</a>
+                <p class="titulo-grupo">Cadastro</p>
+                <a href="insumos.html">Insumos</a>
+                <a href="cadastrar-prato.html">Novo<span class="so-desktop"> prato</span></a>
+                <a href="cadastrar-insumo.html">Novo<span class="so-desktop"> insumo</span></a>
+        </nav>
+
+    </aside>
+
+    <!-- Área de conteúdo -->
+    <div class="area-conteudo">
+
+        <header class="topo">
+            <div>
+                <h2>Painel de Rentabilidade</h2>
+                <p class="subtitulo">Novembro de 2026 &middot; 6 pratos analisados</p>
+            </div>
+            <div class="usuario">
+                <span class="nome">Carlos Daniel</span>
+                <span class="cargo">Gerente</span>
+            </div>
+        </header>
+
+        <main>
+            <div class="cards">
+                <div class="card card-alerta">
+                    <span class="rotulo">CMV médio da casa</span>
+                    <span class="numero">35,3%</span>
+                    <span class="nota">alvo do setor: até 32,0%</span>
+                </div>
+                <div class="card card-critico">
+                    <span class="rotulo">Pratos fora da faixa</span>
+                    <span class="numero">2</span>
+                    <span class="nota">de 6 pratos no cardápio</span>
+                </div>
+                <div class="card card-bom">
+                    <span class="rotulo">Margem de contribuição</span>
+                    <span class="numero valor">R$ 32.164,18</span>
+                    <span class="nota">no mês, antes das despesas fixas</span>
+                </div>
+                <div class="card">
+                    <span class="rotulo">Prato mais pedido</span>
+                    <span class="numero nome">Carne de Sol com Macaxeira</span>
+                    <span class="nota">312 pedidos no mês</span>
+                </div>
+            </div>
+
+            <h3>Pratos que precisam de revisão</h3>
+
+            <div class="quadro">
+                <div class="quadro-titulo">
+                    Acima do CMV ideal de 32,0%
+                    <span class="contagem">2 de 6 pratos</span>
+                </div>
+                <div class="tabela-rolagem">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th class="esconde-celular">Código</th>
+                                <th>Prato</th>
+                                <th>Preço</th>
+                                <th>Custo</th>
+                                <th>CMV</th>
+                                <th class="esconde-celular">Pedidos</th>
+                                <th>Situação</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="codigo esconde-celular">P01</td>
+                                <td class="destaque"><a href="ficha-p01.html">Carne de Sol com Macaxeira</a></td>
+                                <td class="numero-tabela">R$ 68,00</td>
+                                <td class="numero-tabela">R$ 30,38</td>
+                                <td class="numero-tabela">44,7%</td>
+                                <td class="esconde-celular">312</td>
+                                <td><span class="etiqueta critico">Crítico</span></td>
+                            </tr>
+                            <tr>
+                                <td class="codigo esconde-celular">P05</td>
+                                <td class="destaque"><a href="ficha-p05.html">Escondidinho de Carne de Sol</a></td>
+                                <td class="numero-tabela">R$ 49,00</td>
+                                <td class="numero-tabela">R$ 17,85</td>
+                                <td class="numero-tabela">36,4%</td>
+                                <td class="esconde-celular">143</td>
+                                <td><span class="etiqueta critico">Crítico</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </main>
+
+    </div>
+
+</div>
+
+</body>
+</html>

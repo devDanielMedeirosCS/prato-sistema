@@ -1,0 +1,7 @@
+name = "prato-restaurante"
+compatibility_date = "2026-11-18"
+
+# Sistema estatico: o Worker apenas serve os arquivos de public/.
+# Nao ha src/index.ts porque o projeto e HTML e CSS puros, sem JavaScript.
+[assets]
+directory = "./public"

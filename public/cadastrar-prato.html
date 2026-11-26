@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastrar Prato - PRATO</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+
+<div class="sistema">
+
+    <!-- Menu lateral de navegação -->
+    <aside class="menu-lateral">
+
+        <div class="logo">
+            <h1>PRATO</h1>
+            <span class="barra-logo"></span>
+            <p>Painel de Rentabilidade e Análise Técnica Operacional</p>
+        </div>
+
+        <nav>
+                <p class="titulo-grupo">Análise</p>
+                <a href="index.html">Painel</a>
+                <a href="cardapio.html">Cardápio</a>
+                <a href="precificacao.html">Precificação</a>
+                <p class="titulo-grupo">Cadastro</p>
+                <a href="insumos.html">Insumos</a>
+                <a href="cadastrar-prato.html" class="ativo">Novo<span class="so-desktop"> prato</span></a>
+                <a href="cadastrar-insumo.html">Novo<span class="so-desktop"> insumo</span></a>
+        </nav>
+
+    </aside>
+
+    <!-- Área de conteúdo -->
+    <div class="area-conteudo">
+
+        <header class="topo">
+            <div>
+                <h2>Cadastrar Prato</h2>
+                <p class="subtitulo">Novo item no cardápio com sua ficha técnica</p>
+            </div>
+            <div class="usuario">
+                <span class="nome">Carlos Daniel</span>
+                <span class="cargo">Gerente</span>
+            </div>
+        </header>
+
+        <main>
+            <form action="sucesso-prato.html" method="get">
+
+                <div class="form-cabecalho">
+                    <h3>Dados do prato</h3>
+                    <p>Os campos marcados com <span class="obrigatorio">*</span> são obrigatórios</p>
+                </div>
+
+                <div class="form-corpo">
+
+                    <div class="campo">
+                        <label for="nome">Nome do prato <span class="obrigatorio">*</span></label>
+                        <input type="text" id="nome" name="nome" placeholder="Ex: Moqueca de Peixe" maxlength="60" required>
+                    </div>
+
+                    <div class="linha">
+                        <div class="campo">
+                            <label for="categoria">Categoria <span class="obrigatorio">*</span></label>
+                            <select id="categoria" name="categoria" required>
+                                <option value="">Selecione</option>
+                                <option value="entradas">Entradas</option>
+                                <option value="principais">Pratos principais</option>
+                                <option value="guarnicoes">Guarnições</option>
+                                <option value="sobremesas">Sobremesas</option>
+                                <option value="bebidas">Bebidas</option>
+                            </select>
+                        </div>
+
+                        <div class="campo">
+                            <label for="preco">Preço de venda <span class="ajuda">(R$)</span> <span class="obrigatorio">*</span></label>
+                            <input type="number" id="preco" name="preco" min="0.01" step="0.01" placeholder="0.00" required>
+                        </div>
+
+                        <div class="campo">
+                            <label for="porcoes">Rende quantas porções <span class="obrigatorio">*</span></label>
+                            <input type="number" id="porcoes" name="porcoes" min="1" max="99" value="1" required>
+                        </div>
+                    </div>
+
+                    <h3 style="margin-top: 26px;">Ficha técnica</h3>
+
+                    <div class="linha">
+                        <div class="campo">
+                            <label for="insumo1">Insumo principal <span class="obrigatorio">*</span></label>
+                            <select id="insumo1" name="insumo1" required>
+                                <option value="">Selecione o insumo</option>
+                                <option value="I25">I25 &ndash; Alho (R$ 32,00 / kg)</option>
+                                <option value="I06">I06 &ndash; Arroz (R$ 5,40 / kg)</option>
+                                <option value="I21">I21 &ndash; Azeite de dendê (R$ 32,00 / L)</option>
+                                <option value="I07">I07 &ndash; Bacon (R$ 32,00 / kg)</option>
+                                <option value="I13">I13 &ndash; Batata (R$ 6,20 / kg)</option>
+                                <option value="I08">I08 &ndash; Calabresa (R$ 24,90 / kg)</option>
+                                <option value="I10">I10 &ndash; Camarão limpo (R$ 79,00 / kg)</option>
+                                <option value="I01">I01 &ndash; Carne de sol (R$ 62,90 / kg)</option>
+                                <option value="I17">I17 &ndash; Cebola (R$ 5,90 / kg)</option>
+                                <option value="I20">I20 &ndash; Coentro e cebolinha (R$ 3,00 / maço)</option>
+                                <option value="I15">I15 &ndash; Costela suína (R$ 26,40 / kg)</option>
+                                <option value="I23">I23 &ndash; Creme de leite (R$ 16,80 / L)</option>
+                                <option value="I22">I22 &ndash; Farinha de mandioca (R$ 7,90 / kg)</option>
+                                <option value="I14">I14 &ndash; Feijão preto (R$ 9,80 / kg)</option>
+                                <option value="I05">I05 &ndash; Feijão verde (R$ 12,90 / kg)</option>
+                                <option value="I12">I12 &ndash; Frango caipira (R$ 28,50 / kg)</option>
+                                <option value="I11">I11 &ndash; Leite de coco (R$ 14,50 / L)</option>
+                                <option value="I02">I02 &ndash; Macaxeira (R$ 4,80 / kg)</option>
+                                <option value="I03">I03 &ndash; Manteiga de garrafa (R$ 48,00 / L)</option>
+                                <option value="I16">I16 &ndash; Paio (R$ 29,90 / kg)</option>
+                                <option value="I09">I09 &ndash; Peixe pescada amarela (R$ 38,00 / kg)</option>
+                                <option value="I19">I19 &ndash; Pimentão (R$ 8,20 / kg)</option>
+                                <option value="I04">I04 &ndash; Queijo coalho (R$ 44,50 / kg)</option>
+                                <option value="I18">I18 &ndash; Tomate (R$ 7,40 / kg)</option>
+                                <option value="I24">I24 &ndash; Óleo de soja (R$ 8,50 / L)</option>
+                            </select>
+                        </div>
+
+                        <div class="campo">
+                            <label for="qtd1">Quantidade usada <span class="obrigatorio">*</span></label>
+                            <input type="number" id="qtd1" name="qtd1" min="0.001" max="99" step="0.001" placeholder="0.000" required>
+                        </div>
+                    </div>
+
+                    <div class="linha">
+                        <div class="campo">
+                            <label for="insumo2">Segundo insumo</label>
+                            <select id="insumo2" name="insumo2">
+                                <option value="">Selecione o insumo</option>
+                                <option value="I25">I25 &ndash; Alho (R$ 32,00 / kg)</option>
+                                <option value="I06">I06 &ndash; Arroz (R$ 5,40 / kg)</option>
+                                <option value="I21">I21 &ndash; Azeite de dendê (R$ 32,00 / L)</option>
+                                <option value="I07">I07 &ndash; Bacon (R$ 32,00 / kg)</option>
+                                <option value="I13">I13 &ndash; Batata (R$ 6,20 / kg)</option>
+                                <option value="I08">I08 &ndash; Calabresa (R$ 24,90 / kg)</option>
+                                <option value="I10">I10 &ndash; Camarão limpo (R$ 79,00 / kg)</option>
+                                <option value="I01">I01 &ndash; Carne de sol (R$ 62,90 / kg)</option>
+                                <option value="I17">I17 &ndash; Cebola (R$ 5,90 / kg)</option>
+                                <option value="I20">I20 &ndash; Coentro e cebolinha (R$ 3,00 / maço)</option>
+                                <option value="I15">I15 &ndash; Costela suína (R$ 26,40 / kg)</option>
+                                <option value="I23">I23 &ndash; Creme de leite (R$ 16,80 / L)</option>
+                                <option value="I22">I22 &ndash; Farinha de mandioca (R$ 7,90 / kg)</option>
+                                <option value="I14">I14 &ndash; Feijão preto (R$ 9,80 / kg)</option>
+                                <option value="I05">I05 &ndash; Feijão verde (R$ 12,90 / kg)</option>
+                                <option value="I12">I12 &ndash; Frango caipira (R$ 28,50 / kg)</option>
+                                <option value="I11">I11 &ndash; Leite de coco (R$ 14,50 / L)</option>
+                                <option value="I02">I02 &ndash; Macaxeira (R$ 4,80 / kg)</option>
+                                <option value="I03">I03 &ndash; Manteiga de garrafa (R$ 48,00 / L)</option>
+                                <option value="I16">I16 &ndash; Paio (R$ 29,90 / kg)</option>
+                                <option value="I09">I09 &ndash; Peixe pescada amarela (R$ 38,00 / kg)</option>
+                                <option value="I19">I19 &ndash; Pimentão (R$ 8,20 / kg)</option>
+                                <option value="I04">I04 &ndash; Queijo coalho (R$ 44,50 / kg)</option>
+                                <option value="I18">I18 &ndash; Tomate (R$ 7,40 / kg)</option>
+                                <option value="I24">I24 &ndash; Óleo de soja (R$ 8,50 / L)</option>
+                            </select>
+                        </div>
+
+                        <div class="campo">
+                            <label for="qtd2">Quantidade usada</label>
+                            <input type="number" id="qtd2" name="qtd2" min="0.001" max="99" step="0.001" placeholder="0.000">
+                        </div>
+                    </div>
+
+                    <div class="linha">
+                        <div class="campo">
+                            <label for="insumo3">Terceiro insumo</label>
+                            <select id="insumo3" name="insumo3">
+                                <option value="">Selecione o insumo</option>
+                                <option value="I25">I25 &ndash; Alho (R$ 32,00 / kg)</option>
+                                <option value="I06">I06 &ndash; Arroz (R$ 5,40 / kg)</option>
+                                <option value="I21">I21 &ndash; Azeite de dendê (R$ 32,00 / L)</option>
+                                <option value="I07">I07 &ndash; Bacon (R$ 32,00 / kg)</option>
+                                <option value="I13">I13 &ndash; Batata (R$ 6,20 / kg)</option>
+                                <option value="I08">I08 &ndash; Calabresa (R$ 24,90 / kg)</option>
+                                <option value="I10">I10 &ndash; Camarão limpo (R$ 79,00 / kg)</option>
+                                <option value="I01">I01 &ndash; Carne de sol (R$ 62,90 / kg)</option>
+                                <option value="I17">I17 &ndash; Cebola (R$ 5,90 / kg)</option>
+                                <option value="I20">I20 &ndash; Coentro e cebolinha (R$ 3,00 / maço)</option>
+                                <option value="I15">I15 &ndash; Costela suína (R$ 26,40 / kg)</option>
+                                <option value="I23">I23 &ndash; Creme de leite (R$ 16,80 / L)</option>
+                                <option value="I22">I22 &ndash; Farinha de mandioca (R$ 7,90 / kg)</option>
+                                <option value="I14">I14 &ndash; Feijão preto (R$ 9,80 / kg)</option>
+                                <option value="I05">I05 &ndash; Feijão verde (R$ 12,90 / kg)</option>
+                                <option value="I12">I12 &ndash; Frango caipira (R$ 28,50 / kg)</option>
+                                <option value="I11">I11 &ndash; Leite de coco (R$ 14,50 / L)</option>
+                                <option value="I02">I02 &ndash; Macaxeira (R$ 4,80 / kg)</option>
+                                <option value="I03">I03 &ndash; Manteiga de garrafa (R$ 48,00 / L)</option>
+                                <option value="I16">I16 &ndash; Paio (R$ 29,90 / kg)</option>
+                                <option value="I09">I09 &ndash; Peixe pescada amarela (R$ 38,00 / kg)</option>
+                                <option value="I19">I19 &ndash; Pimentão (R$ 8,20 / kg)</option>
+                                <option value="I04">I04 &ndash; Queijo coalho (R$ 44,50 / kg)</option>
+                                <option value="I18">I18 &ndash; Tomate (R$ 7,40 / kg)</option>
+                                <option value="I24">I24 &ndash; Óleo de soja (R$ 8,50 / L)</option>
+                            </select>
+                        </div>
+
+                        <div class="campo">
+                            <label for="qtd3">Quantidade usada</label>
+                            <input type="number" id="qtd3" name="qtd3" min="0.001" max="99" step="0.001" placeholder="0.000">
+                        </div>
+                    </div>
+
+                    <div class="campo">
+                        <label for="modo">Modo de preparo <span class="ajuda">(opcional)</span></label>
+                        <textarea id="modo" name="modo" rows="3" maxlength="400" placeholder="Observações de preparo, ponto da carne, tempo de cocção..."></textarea>
+                    </div>
+
+                </div>
+
+                <div class="form-rodape">
+                    <button type="submit">Cadastrar prato</button>
+                    <span class="nota-rodape">O código do prato é gerado automaticamente</span>
+                </div>
+
+            </form>
+        </main>
+
+    </div>
+
+</div>
+
+</body>
+</html>

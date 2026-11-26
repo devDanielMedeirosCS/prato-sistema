@@ -1,0 +1,972 @@
+/* ===================================================
+   PRATO - Painel de Rentabilidade e Análise Técnica
+   Folha de estilo principal
+   =================================================== */
+
+/* ===== Reset ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', Arial, Helvetica, sans-serif;
+    background-color: #f7f4f0;
+    color: #2d2420;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+/* ===================================================
+   ESTRUTURA GERAL
+   =================================================== */
+.sistema {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* ===== Menu lateral ===== */
+.menu-lateral {
+    width: 250px;
+    flex-shrink: 0;
+    background: linear-gradient(180deg, #5c1515 0%, #7d2020 100%);
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+}
+
+.logo {
+    padding: 28px 24px 24px 24px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.logo h1 {
+    font-size: 30px;
+    font-weight: 800;
+    letter-spacing: 3px;
+}
+
+.logo .barra-logo {
+    display: block;
+    width: 40px;
+    height: 3px;
+    background-color: #e0a106;
+    margin: 8px 0 10px 0;
+}
+
+.logo p {
+    font-size: 12px;
+    color: #e3bdbd;
+    line-height: 1.4;
+}
+
+.menu-lateral nav {
+    padding: 18px 12px;
+    flex-grow: 1;
+}
+
+.menu-lateral .titulo-grupo {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #c99191;
+    padding: 12px 12px 8px 12px;
+    font-weight: 600;
+}
+
+.menu-lateral nav a {
+    display: block;
+    color: #f0dede;
+    text-decoration: none;
+    padding: 11px 14px;
+    font-size: 14px;
+    border-radius: 7px;
+    margin-bottom: 3px;
+    border-left: 3px solid transparent;
+}
+
+.menu-lateral nav a:hover {
+    background-color: rgba(255, 255, 255, 0.08);
+    color: #ffffff;
+}
+
+.menu-lateral nav a.ativo {
+    background-color: rgba(224, 161, 6, 0.18);
+    border-left-color: #e0a106;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+/* ===== Área de conteúdo ===== */
+.area-conteudo {
+    flex: 1;
+    /* permite a tabela rolar sem empurrar o menu */
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.topo {
+    background-color: #ffffff;
+    border-bottom: 1px solid #e9e2da;
+    padding: 20px 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.topo h2 {
+    font-size: 21px;
+    font-weight: 700;
+    color: #5c1515;
+}
+
+.topo .subtitulo {
+    font-size: 13px;
+    color: #8a7d74;
+    margin-top: 2px;
+}
+
+.usuario {
+    text-align: right;
+    padding-left: 16px;
+    border-left: 1px solid #e9e2da;
+}
+
+.usuario .nome {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    color: #2d2420;
+}
+
+.usuario .cargo {
+    display: block;
+    font-size: 12px;
+    color: #8a7d74;
+}
+
+main {
+    padding: 28px 32px;
+    flex-grow: 1;
+}
+
+h3 {
+    font-size: 16px;
+    font-weight: 700;
+    color: #5c1515;
+    margin-top: 32px;
+    margin-bottom: 14px;
+}
+
+h3:first-child {
+    margin-top: 0;
+}
+
+/* ===================================================
+   CARDS DE RESUMO
+   =================================================== */
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.card {
+    background-color: #ffffff;
+    border: 1px solid #e9e2da;
+    border-radius: 10px;
+    padding: 20px 22px;
+    flex: 1;
+    min-width: 190px;
+    box-shadow: 0 1px 3px rgba(92, 21, 21, 0.06);
+    position: relative;
+    overflow: hidden;
+}
+
+/* faixa colorida na lateral do card */
+.card::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background-color: #e0a106;
+}
+
+.card .rotulo {
+    display: block;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #8a7d74;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.card .numero {
+    display: block;
+    font-size: 30px;
+    font-weight: 700;
+    color: #2d2420;
+    line-height: 1.1;
+    /* valor não pode quebrar no meio: R$ numa linha e o número na outra */
+    white-space: nowrap;
+}
+
+/* valor em reais ocupa mais espaço que uma porcentagem */
+.card .numero.valor {
+    font-size: 25px;
+}
+
+/* quando o conteúdo do card é um nome e não um número */
+.card .numero.nome {
+    font-size: 19px;
+    line-height: 1.25;
+    white-space: normal;
+}
+
+.card .nota {
+    display: block;
+    font-size: 12px;
+    color: #8a7d74;
+    margin-top: 6px;
+}
+
+.card-bom::before {
+    background-color: #15803d;
+}
+
+.card-bom .numero {
+    color: #15803d;
+}
+
+.card-alerta::before {
+    background-color: #c2410c;
+}
+
+.card-alerta .numero {
+    color: #c2410c;
+}
+
+.card-critico::before {
+    background-color: #dc2626;
+}
+
+.card-critico .numero {
+    color: #b91c1c;
+}
+
+/* ===================================================
+   TABELAS
+   =================================================== */
+.quadro {
+    background-color: #ffffff;
+    border: 1px solid #e9e2da;
+    border-radius: 10px;
+    box-shadow: 0 1px 3px rgba(92, 21, 21, 0.06);
+    overflow: hidden;
+}
+
+.quadro-titulo {
+    padding: 16px 20px;
+    border-bottom: 1px solid #e9e2da;
+    font-size: 14px;
+    font-weight: 700;
+    color: #5c1515;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.quadro-titulo .contagem {
+    font-size: 12px;
+    font-weight: 500;
+    color: #8a7d74;
+}
+
+.tabela-rolagem {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th {
+    background-color: #faf7f3;
+    color: #6b5d54;
+    padding: 12px 16px;
+    text-align: left;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    white-space: nowrap;
+    border-bottom: 1px solid #e9e2da;
+}
+
+td {
+    padding: 14px 16px;
+    border-bottom: 1px solid #f3eee8;
+    font-size: 14px;
+    color: #3d342e;
+}
+
+tr:last-child td {
+    border-bottom: none;
+}
+
+tbody tr:hover td {
+    background-color: #fdfbf8;
+}
+
+.codigo {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 13px;
+    color: #8a7d74;
+    font-weight: 600;
+}
+
+.destaque {
+    font-weight: 600;
+    color: #2d2420;
+}
+
+/* link para a ficha de um prato, dentro da tabela */
+td a {
+    color: #7d2020;
+    text-decoration: none;
+    border-bottom: 1px dotted #c9a9a9;
+}
+
+td a:hover {
+    color: #a16207;
+    border-bottom-color: #e0a106;
+}
+
+.numero-tabela {
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+/* ===================================================
+   ETIQUETAS DE SITUAÇÃO
+   =================================================== */
+.etiqueta {
+    display: inline-block;
+    padding: 4px 11px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    white-space: nowrap;
+    border: 1px solid transparent;
+}
+
+.ok {
+    background-color: #dcfce7;
+    color: #15803d;
+    border-color: #bbf7d0;
+}
+
+.alerta {
+    background-color: #ffedd5;
+    color: #c2410c;
+    border-color: #fed7aa;
+}
+
+.critico {
+    background-color: #fee2e2;
+    color: #b91c1c;
+    border-color: #fecaca;
+}
+
+.neutro {
+    background-color: #f1ece7;
+    color: #6b5d54;
+    border-color: #e4ddd5;
+}
+
+/* ===================================================
+   BARRA DE COMPOSIÇÃO DO CUSTO
+   A largura de cada fatia vem do peso do insumo,
+   por isso é declarada no próprio HTML.
+   =================================================== */
+/* container da barra de composição do custo */
+.painel-composicao {
+    background-color: #ffffff;
+    border: 1px solid #e9e2da;
+    border-radius: 10px;
+    box-shadow: 0 1px 3px rgba(92, 21, 21, 0.06);
+    padding: 22px 24px;
+    margin-bottom: 18px;
+}
+
+.barra-composicao {
+    display: flex;
+    width: 100%;
+    height: 34px;
+    border-radius: 7px;
+    overflow: hidden;
+    margin-bottom: 16px;
+    border: 1px solid #e9e2da;
+}
+
+.fatia {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+    font-weight: 700;
+    color: #ffffff;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+/* tons da mesma família, do mais forte ao mais claro */
+.fatia-1 { background-color: #7d2020; }
+.fatia-2 { background-color: #a83a2a; }
+.fatia-3 { background-color: #c2410c; }
+.fatia-4 { background-color: #d97706; }
+.fatia-5 { background-color: #e0a106; }
+.fatia-6 { background-color: #eab308; }
+.fatia-7 { background-color: #d6c08a; }
+
+.legenda-composicao {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    font-size: 12px;
+    color: #6b5d54;
+    margin-bottom: 4px;
+}
+
+.legenda-composicao span {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.ponto {
+    display: inline-block;
+    width: 11px;
+    height: 11px;
+    border-radius: 3px;
+}
+
+/* ===================================================
+   FORMULÁRIOS
+   =================================================== */
+form {
+    background-color: #ffffff;
+    border: 1px solid #e9e2da;
+    border-radius: 10px;
+    box-shadow: 0 1px 3px rgba(92, 21, 21, 0.06);
+    overflow: hidden;
+    margin-bottom: 24px;
+}
+
+.form-cabecalho {
+    padding: 16px 24px;
+    background-color: #faf7f3;
+    border-bottom: 1px solid #e9e2da;
+}
+
+.form-cabecalho h3 {
+    margin: 0;
+    font-size: 15px;
+}
+
+.form-cabecalho p {
+    font-size: 12px;
+    color: #8a7d74;
+    margin-top: 3px;
+}
+
+.form-corpo {
+    padding: 24px;
+}
+
+.form-rodape {
+    padding: 16px 24px;
+    background-color: #faf7f3;
+    border-top: 1px solid #e9e2da;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.campo {
+    margin-bottom: 18px;
+}
+
+.campo:last-child {
+    margin-bottom: 0;
+}
+
+label {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #3d342e;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 11px 13px;
+    border: 1px solid #ded5cc;
+    border-radius: 7px;
+    font-size: 14px;
+    font-family: 'Inter', Arial, Helvetica, sans-serif;
+    color: #2d2420;
+    background-color: #ffffff;
+}
+
+input::placeholder, textarea::placeholder {
+    color: #b3a79d;
+}
+
+input:focus, select:focus, textarea:focus {
+    border-color: #e0a106;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(224, 161, 6, 0.18);
+}
+
+.linha {
+    display: flex;
+    gap: 18px;
+}
+
+.linha .campo {
+    flex: 1;
+}
+
+button {
+    background-color: #7d2020;
+    color: #ffffff;
+    border: none;
+    padding: 12px 26px;
+    border-radius: 7px;
+    font-size: 14px;
+    font-weight: 600;
+    font-family: 'Inter', Arial, Helvetica, sans-serif;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #5c1515;
+}
+
+.obrigatorio {
+    color: #dc2626;
+}
+
+.ajuda {
+    font-size: 12px;
+    color: #8a7d74;
+    font-weight: 400;
+}
+
+.nota-rodape {
+    font-size: 12px;
+    color: #8a7d74;
+}
+
+/* ===================================================
+   AVISOS
+   =================================================== */
+.aviso {
+    border-radius: 10px;
+    padding: 15px 18px;
+    margin-bottom: 18px;
+    font-size: 14px;
+    border: 1px solid #fed7aa;
+    background-color: #fff8ef;
+    color: #7c3a06;
+}
+
+.aviso strong {
+    color: #c2410c;
+}
+
+.aviso-critico {
+    background-color: #fff5f5;
+    border-color: #fecaca;
+    color: #7f1d1d;
+}
+
+.aviso-critico strong {
+    color: #b91c1c;
+}
+
+.aviso-info {
+    background-color: #fffbeb;
+    border-color: #f3dca0;
+    color: #78500a;
+}
+
+.aviso-info strong {
+    color: #a16207;
+}
+
+/* ===================================================
+   BLOCOS DE TEXTO
+   =================================================== */
+.texto {
+    background-color: #ffffff;
+    border: 1px solid #e9e2da;
+    border-radius: 10px;
+    box-shadow: 0 1px 3px rgba(92, 21, 21, 0.06);
+    padding: 22px 24px;
+    font-size: 14px;
+    line-height: 1.65;
+    color: #4a3f38;
+}
+
+.texto p {
+    margin-bottom: 12px;
+}
+
+.texto p:last-child {
+    margin-bottom: 0;
+}
+
+.texto ul {
+    margin-left: 20px;
+}
+
+/* parágrafo que vem logo depois de uma lista precisa de respiro */
+.texto ul + p {
+    margin-top: 14px;
+}
+
+.texto li {
+    margin-bottom: 9px;
+}
+
+.texto li:last-child {
+    margin-bottom: 0;
+}
+
+.texto strong {
+    color: #5c1515;
+}
+
+details {
+    background-color: #ffffff;
+    border: 1px solid #e9e2da;
+    border-radius: 10px;
+    padding: 16px 20px;
+    margin-top: 14px;
+    box-shadow: 0 1px 3px rgba(92, 21, 21, 0.06);
+}
+
+summary {
+    font-weight: 600;
+    font-size: 14px;
+    color: #a16207;
+    cursor: pointer;
+}
+
+summary:hover {
+    color: #5c1515;
+}
+
+details ul {
+    margin-top: 12px;
+    margin-left: 20px;
+    font-size: 14px;
+    color: #4a3f38;
+    line-height: 1.6;
+}
+
+details li {
+    margin-bottom: 8px;
+}
+
+details strong {
+    color: #5c1515;
+}
+
+/* ===================================================
+   FILTROS
+   =================================================== */
+.filtros {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    align-items: center;
+    margin-bottom: 18px;
+}
+
+.filtros strong {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #8a7d74;
+    margin-right: 4px;
+}
+
+.filtros a {
+    text-decoration: none;
+    color: #6b5d54;
+    background-color: #ffffff;
+    border: 1px solid #e4ddd5;
+    padding: 7px 15px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.filtros a:hover {
+    border-color: #e0a106;
+    color: #a16207;
+}
+
+.filtros a.filtro-ativo {
+    background-color: #5c1515;
+    border-color: #5c1515;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+/* ===================================================
+   TELA DE CONFIRMAÇÃO
+   =================================================== */
+.sucesso {
+    background-color: #ffffff;
+    border: 1px solid #e9e2da;
+    border-radius: 12px;
+    box-shadow: 0 1px 3px rgba(92, 21, 21, 0.06);
+    padding: 45px 30px;
+    text-align: center;
+    max-width: 620px;
+    margin: 0 auto;
+}
+
+.selo {
+    display: block;
+    width: 68px;
+    height: 68px;
+    line-height: 68px;
+    border-radius: 50%;
+    background-color: #dcfce7;
+    color: #15803d;
+    font-size: 32px;
+    margin: 0 auto 18px auto;
+}
+
+.sucesso h3 {
+    margin: 0 0 8px 0;
+    font-size: 20px;
+    color: #2d2420;
+}
+
+.sucesso p {
+    font-size: 14px;
+    color: #6b5d54;
+    margin-bottom: 26px;
+    line-height: 1.6;
+}
+
+.botoes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.botao-link {
+    background-color: #7d2020;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 11px 22px;
+    border-radius: 7px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.botao-link:hover {
+    background-color: #5c1515;
+}
+
+.botao-secundario {
+    background-color: #ffffff;
+    color: #6b5d54;
+    border: 1px solid #ded5cc;
+}
+
+.botao-secundario:hover {
+    background-color: #faf7f3;
+    color: #5c1515;
+}
+
+.passos {
+    background-color: #fffbeb;
+    border: 1px solid #f3dca0;
+    border-radius: 9px;
+    padding: 16px 18px 16px 36px;
+    margin-top: 28px;
+    font-size: 13px;
+    text-align: left;
+    color: #78500a;
+    line-height: 1.6;
+}
+
+.passos li {
+    margin-bottom: 7px;
+}
+
+.passos li:last-child {
+    margin-bottom: 0;
+}
+
+/* ===================================================
+   TABLET - até 900px
+   =================================================== */
+@media (max-width: 900px) {
+
+    .sistema {
+        display: block;
+    }
+
+    .menu-lateral {
+        width: 100%;
+    }
+
+    .logo {
+        padding: 18px 20px 14px 20px;
+    }
+
+    .logo h1 {
+        font-size: 24px;
+    }
+
+    .logo .barra-logo {
+        margin: 6px 0 8px 0;
+    }
+
+    .menu-lateral nav {
+        padding: 10px;
+        display: flex;
+        gap: 4px;
+        overflow-x: auto;
+    }
+
+    .menu-lateral .titulo-grupo {
+        display: none;
+    }
+
+    /* no menu em barra, o complemento do rótulo some */
+    .so-desktop {
+        display: none;
+    }
+
+    .menu-lateral nav a {
+        margin-bottom: 0;
+        white-space: nowrap;
+        border-left: none;
+        border-bottom: 3px solid transparent;
+        border-radius: 7px 7px 0 0;
+    }
+
+    .menu-lateral nav a.ativo {
+        border-left: none;
+        border-bottom-color: #e0a106;
+    }
+
+    .topo, main {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .linha {
+        display: block;
+    }
+}
+
+/* ===================================================
+   CELULAR - até 540px
+   =================================================== */
+@media (max-width: 540px) {
+
+    body {
+        font-size: 14px;
+    }
+
+    .topo {
+        padding: 16px;
+    }
+
+    .topo h2 {
+        font-size: 18px;
+    }
+
+    .usuario {
+        padding-left: 0;
+        border-left: none;
+        text-align: left;
+    }
+
+    main {
+        padding: 18px 16px;
+    }
+
+    .card {
+        min-width: 100%;
+        padding: 16px 18px;
+    }
+
+    .card .numero {
+        font-size: 26px;
+    }
+
+    .card .numero.valor {
+        font-size: 22px;
+    }
+
+    th {
+        padding: 10px 12px;
+    }
+
+    td {
+        padding: 11px 12px;
+        font-size: 13px;
+    }
+
+    .esconde-celular {
+        display: none;
+    }
+
+    .form-corpo, .form-rodape, .form-cabecalho {
+        padding: 16px;
+    }
+
+    .filtros a {
+        flex: 1;
+        text-align: center;
+    }
+
+    .botao-link {
+        width: 100%;
+        text-align: center;
+    }
+
+    .sucesso {
+        padding: 30px 18px;
+    }
+
+    /* na barra de composição, só a maior fatia mostra o número */
+    .fatia {
+        font-size: 10px;
+    }
+}

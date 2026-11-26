@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insumos - PRATO</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+
+<div class="sistema">
+
+    <!-- Menu lateral de navegação -->
+    <aside class="menu-lateral">
+
+        <div class="logo">
+            <h1>PRATO</h1>
+            <span class="barra-logo"></span>
+            <p>Painel de Rentabilidade e Análise Técnica Operacional</p>
+        </div>
+
+        <nav>
+                <p class="titulo-grupo">Análise</p>
+                <a href="index.html">Painel</a>
+                <a href="cardapio.html">Cardápio</a>
+                <a href="precificacao.html">Precificação</a>
+                <p class="titulo-grupo">Cadastro</p>
+                <a href="insumos.html" class="ativo">Insumos</a>
+                <a href="cadastrar-prato.html">Novo<span class="so-desktop"> prato</span></a>
+                <a href="cadastrar-insumo.html">Novo<span class="so-desktop"> insumo</span></a>
+        </nav>
+
+    </aside>
+
+    <!-- Área de conteúdo -->
+    <div class="area-conteudo">
+
+        <header class="topo">
+            <div>
+                <h2>Insumos</h2>
+                <p class="subtitulo">25 insumos &middot; base de cálculo de todas as fichas</p>
+            </div>
+            <div class="usuario">
+                <span class="nome">Carlos Daniel</span>
+                <span class="cargo">Gerente</span>
+            </div>
+        </header>
+
+        <main>
+
+            <div class="quadro">
+                <div class="quadro-titulo">
+                    Insumos ordenados pelo preço de compra
+                    <span class="contagem">25 insumos cadastrados</span>
+                </div>
+                <div class="tabela-rolagem">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th class="esconde-celular">Código</th>
+                                <th>Insumo</th>
+                                <th class="esconde-celular">Categoria</th>
+                                <th>Preço</th>
+                                <th>Unidade</th>
+                                <th class="esconde-celular">Fornecedor</th>
+                                <th>Pratos</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="codigo esconde-celular">I10</td>
+                                <td class="destaque">Camarão limpo</td>
+                                <td class="esconde-celular">Pescados</td>
+                                <td class="numero-tabela">R$ 79,00</td>
+                                <td>kg</td>
+                                <td class="esconde-celular">Peixaria do Porto</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td class="codigo esconde-celular">I01</td>
+                                <td class="destaque">Carne de sol</td>
+                                <td class="esconde-celular">Carnes</td>
+                                <td class="numero-tabela">R$ 62,90</td>
+                                <td>kg</td>
+                                <td class="esconde-celular">Casa de Carnes Boi Bom</td>
+                                <td>2</td>
+                            </tr>
+                            <tr>
+                                <td class="codigo esconde-celular">I03</td>
+                                <td class="destaque">Manteiga de garrafa</td>
+                                <td class="esconde-celular">Laticínios</td>
+                                <td class="numero-tabela">R$ 48,00</td>
+                                <td>L</td>
+                                <td class="esconde-celular">Sítio Serrano</td>
+                                <td>2</td>
+                            </tr>
+                            <tr>
+                                <td class="codigo esconde-celular">I04</td>
+                                <td class="destaque">Queijo coalho</td>
+                                <td class="esconde-celular">Laticínios</td>
+                                <td class="numero-tabela">R$ 44,50</td>
+                                <td>kg</td>
+                                <td class="esconde-celular">Sítio Serrano</td>
+                                <td>3</td>
+                            </tr>
+                            <tr>
+                                <td class="codigo esconde-celular">I09</td>
+                                <td class="destaque">Peixe pescada amarela</td>
+                                <td class="esconde-celular">Pescados</td>
+                                <td class="numero-tabela">R$ 38,00</td>
+                                <td>kg</td>
+                                <td class="esconde-celular">Peixaria do Porto</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td class="codigo esconde-celular">I07</td>
+                                <td class="destaque">Bacon</td>
+                                <td class="esconde-celular">Carnes</td>
+                                <td class="numero-tabela">R$ 32,00</td>
+                                <td>kg</td>
+                                <td class="esconde-celular">Casa de Carnes Boi Bom</td>
+                                <td>2</td>
+                            </tr>
+                            <tr>
+                                <td class="codigo esconde-celular">I21</td>
+                                <td class="destaque">Azeite de dendê</td>
+                                <td class="esconde-celular">Mercearia</td>
+                                <td class="numero-tabela">R$ 32,00</td>
+                                <td>L</td>
+                                <td class="esconde-celular">Atacadão JP</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td class="codigo esconde-celular">I25</td>
+                                <td class="destaque">Alho</td>
+                                <td class="esconde-celular">Hortifrúti</td>
+                                <td class="numero-tabela">R$ 32,00</td>
+                                <td>kg</td>
+                                <td class="esconde-celular">Feira de Mangabeira</td>
+                                <td>4</td>
+                            </tr>
+                            <tr>
+                                <td class="codigo esconde-celular">I16</td>
+                                <td class="destaque">Paio</td>
+                                <td class="esconde-celular">Carnes</td>
+                                <td class="numero-tabela">R$ 29,90</td>
+                                <td>kg</td>
+                                <td class="esconde-celular">Casa de Carnes Boi Bom</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td class="codigo esconde-celular">I12</td>
+                                <td class="destaque">Frango caipira</td>
+                                <td class="esconde-celular">Carnes</td>
+                                <td class="numero-tabela">R$ 28,50</td>
+                                <td>kg</td>
+                                <td class="esconde-celular">Granja Vale Verde</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td class="codigo esconde-celular">I15</td>
+                                <td class="destaque">Costela suína</td>
+                                <td class="esconde-celular">Carnes</td>
+                                <td class="numero-tabela">R$ 26,40</td>
+                                <td>kg</td>
+                                <td class="esconde-celular">Casa de Carnes Boi Bom</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td class="codigo esconde-celular">I08</td>
+                                <td class="destaque">Calabresa</td>
+                                <td class="esconde-celular">Carnes</td>
+                                <td class="numero-tabela">R$ 24,90</td>
+                                <td>kg</td>
+                                <td class="esconde-celular">Casa de Carnes Boi Bom</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td class="codigo esconde-celular">I23</td>
+                                <td class="destaque">Creme de leite</td>
+                                <td class="esconde-celular">Laticínios</td>
+                                <td class="numero-tabela">R$ 16,80</td>
+                                <td>L</td>
+                                <td class="esconde-celular">Sítio Serrano</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td class="codigo esconde-celular">I11</td>
+                                <td class="destaque">Leite de coco</td>
+                                <td class="esconde-celular">Mercearia</td>
+                                <td class="numero-tabela">R$ 14,50</td>
+                                <td>L</td>
+                                <td class="esconde-celular">Atacadão JP</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td class="codigo esconde-celular">I05</td>
+                                <td class="destaque">Feijão verde</td>
+                                <td class="esconde-celular">Mercearia</td>
+                                <td class="numero-tabela">R$ 12,90</td>
+                                <td>kg</td>
+                                <td class="esconde-celular">Feira de Mangabeira</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td class="codigo esconde-celular">I14</td>
+                                <td class="destaque">Feijão preto</td>
+                                <td class="esconde-celular">Mercearia</td>
+                                <td class="numero-tabela">R$ 9,80</td>
+                                <td>kg</td>
+                                <td class="esconde-celular">Atacadão JP</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td class="codigo esconde-celular">I24</td>
+                                <td class="destaque">Óleo de soja</td>
+                                <td class="esconde-celular">Mercearia</td>
+                                <td class="numero-tabela">R$ 8,50</td>
+                                <td>L</td>
+                                <td class="esconde-celular">Atacadão JP</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td class="codigo esconde-celular">I19</td>
+                                <td class="destaque">Pimentão</td>
+                                <td class="esconde-celular">Hortifrúti</td>
+                                <td class="numero-tabela">R$ 8,20</td>
+                                <td>kg</td>
+                                <td class="esconde-celular">Feira de Mangabeira</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td class="codigo esconde-celular">I22</td>
+                                <td class="destaque">Farinha de mandioca</td>
+                                <td class="esconde-celular">Mercearia</td>
+                                <td class="numero-tabela">R$ 7,90</td>
+                                <td>kg</td>
+                                <td class="esconde-celular">Atacadão JP</td>
+                                <td>2</td>
+                            </tr>
+                            <tr>
+                                <td class="codigo esconde-celular">I18</td>
+                                <td class="destaque">Tomate</td>
+                                <td class="esconde-celular">Hortifrúti</td>
+                                <td class="numero-tabela">R$ 7,40</td>
+                                <td>kg</td>
+                                <td class="esconde-celular">Feira de Mangabeira</td>
+                                <td>2</td>
+                            </tr>
+                            <tr>
+                                <td class="codigo esconde-celular">I13</td>
+                                <td class="destaque">Batata</td>
+                                <td class="esconde-celular">Hortifrúti</td>
+                                <td class="numero-tabela">R$ 6,20</td>
+                                <td>kg</td>
+                                <td class="esconde-celular">Feira de Mangabeira</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td class="codigo esconde-celular">I17</td>
+                                <td class="destaque">Cebola</td>
+                                <td class="esconde-celular">Hortifrúti</td>
+                                <td class="numero-tabela">R$ 5,90</td>
+                                <td>kg</td>
+                                <td class="esconde-celular">Feira de Mangabeira</td>
+                                <td>6</td>
+                            </tr>
+                            <tr>
+                                <td class="codigo esconde-celular">I06</td>
+                                <td class="destaque">Arroz</td>
+                                <td class="esconde-celular">Mercearia</td>
+                                <td class="numero-tabela">R$ 5,40</td>
+                                <td>kg</td>
+                                <td class="esconde-celular">Atacadão JP</td>
+                                <td>2</td>
+                            </tr>
+                            <tr>
+                                <td class="codigo esconde-celular">I02</td>
+                                <td class="destaque">Macaxeira</td>
+                                <td class="esconde-celular">Hortifrúti</td>
+                                <td class="numero-tabela">R$ 4,80</td>
+                                <td>kg</td>
+                                <td class="esconde-celular">Feira de Mangabeira</td>
+                                <td>2</td>
+                            </tr>
+                            <tr>
+                                <td class="codigo esconde-celular">I20</td>
+                                <td class="destaque">Coentro e cebolinha</td>
+                                <td class="esconde-celular">Hortifrúti</td>
+                                <td class="numero-tabela">R$ 3,00</td>
+                                <td>maço</td>
+                                <td class="esconde-celular">Feira de Mangabeira</td>
+                                <td>5</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
+
+    </div>
+
+</div>
+
+</body>
+</html>

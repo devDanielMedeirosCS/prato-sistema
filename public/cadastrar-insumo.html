@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastrar Insumo - PRATO</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+
+<div class="sistema">
+
+    <!-- Menu lateral de navegação -->
+    <aside class="menu-lateral">
+
+        <div class="logo">
+            <h1>PRATO</h1>
+            <span class="barra-logo"></span>
+            <p>Painel de Rentabilidade e Análise Técnica Operacional</p>
+        </div>
+
+        <nav>
+                <p class="titulo-grupo">Análise</p>
+                <a href="index.html">Painel</a>
+                <a href="cardapio.html">Cardápio</a>
+                <a href="precificacao.html">Precificação</a>
+                <p class="titulo-grupo">Cadastro</p>
+                <a href="insumos.html">Insumos</a>
+                <a href="cadastrar-prato.html">Novo<span class="so-desktop"> prato</span></a>
+                <a href="cadastrar-insumo.html" class="ativo">Novo<span class="so-desktop"> insumo</span></a>
+        </nav>
+
+    </aside>
+
+    <!-- Área de conteúdo -->
+    <div class="area-conteudo">
+
+        <header class="topo">
+            <div>
+                <h2>Cadastrar Insumo</h2>
+                <p class="subtitulo">Novo item na base de custos</p>
+            </div>
+            <div class="usuario">
+                <span class="nome">Carlos Daniel</span>
+                <span class="cargo">Gerente</span>
+            </div>
+        </header>
+
+        <main>
+            <form action="sucesso-insumo.html" method="get">
+
+                <div class="form-cabecalho">
+                    <h3>Dados do insumo</h3>
+                    <p>Os campos marcados com <span class="obrigatorio">*</span> são obrigatórios</p>
+                </div>
+
+                <div class="form-corpo">
+
+                    <div class="campo">
+                        <label for="nome">Nome do insumo <span class="obrigatorio">*</span></label>
+                        <input type="text" id="nome" name="nome" placeholder="Ex: Filé de tilápia" maxlength="60" required>
+                    </div>
+
+                    <div class="linha">
+                        <div class="campo">
+                            <label for="categoria">Categoria <span class="obrigatorio">*</span></label>
+                            <select id="categoria" name="categoria" required>
+                                <option value="">Selecione</option>
+                                <option value="carnes">Carnes</option>
+                                <option value="pescados">Pescados</option>
+                                <option value="laticinios">Laticínios</option>
+                                <option value="hortifruti">Hortifrúti</option>
+                                <option value="mercearia">Mercearia</option>
+                                <option value="bebidas">Bebidas</option>
+                                <option value="descartaveis">Descartáveis</option>
+                            </select>
+                        </div>
+
+                        <div class="campo">
+                            <label for="unidade">Unidade de compra <span class="obrigatorio">*</span></label>
+                            <select id="unidade" name="unidade" required>
+                                <option value="">Selecione</option>
+                                <option value="kg">Quilo</option>
+                                <option value="l">Litro</option>
+                                <option value="un">Unidade</option>
+                                <option value="maco">Maço</option>
+                                <option value="duzia">Dúzia</option>
+                            </select>
+                        </div>
+
+                        <div class="campo">
+                            <label for="preco">Preço da unidade <span class="ajuda">(R$)</span> <span class="obrigatorio">*</span></label>
+                            <input type="number" id="preco" name="preco" min="0.01" step="0.01" placeholder="0.00" required>
+                        </div>
+                    </div>
+
+                    <div class="linha">
+                        <div class="campo">
+                            <label for="fornecedor">Fornecedor <span class="obrigatorio">*</span></label>
+                            <input type="text" id="fornecedor" name="fornecedor" placeholder="Ex: Peixaria do Porto" maxlength="60" required>
+                        </div>
+
+                        <div class="campo">
+                            <label for="data">Data desta cotação <span class="obrigatorio">*</span></label>
+                            <input type="date" id="data" name="data" max="2026-11-17" required>
+                        </div>
+                    </div>
+
+                    <div class="campo">
+                        <label for="observacao">Observações <span class="ajuda">(opcional)</span></label>
+                        <textarea id="observacao" name="observacao" rows="3" maxlength="300" placeholder="Pedido mínimo, prazo de entrega, condição de pagamento..."></textarea>
+                    </div>
+
+                </div>
+
+                <div class="form-rodape">
+                    <button type="submit">Cadastrar insumo</button>
+                    <span class="nota-rodape">Todos os pratos que usarem este insumo terão o CMV recalculado</span>
+                </div>
+
+            </form>
+        </main>
+
+    </div>
+
+</div>
+
+</body>
+</html>
